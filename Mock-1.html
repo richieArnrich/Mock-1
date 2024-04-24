@@ -12,6 +12,7 @@
         margin-bottom: 10px;
         margin-left: auto;
         margin-right: auto;
+        transition: border-radius 0.5s, background-color 0.5s;
       }
       button {
         display: block;
@@ -27,11 +28,14 @@
       let toggle = true;
       function Change() {
         if (toggle) {
-          document.getElementById("i1").style.borderRadius = "12.5rem";
+          document.getElementById("i1").style.borderStartEndRadius = "12.5rem";
+          document.getElementById("i1").style.borderStartStartRadius = "0";
           document.getElementById("i1").style.backgroundColor = "blue";
           toggle = false;
         } else {
           document.getElementById("i1").style.borderRadius = "0";
+          document.getElementById("i1").style.borderStartStartRadius =
+            "12.5rem";
           document.getElementById("i1").style.backgroundColor = "green";
           toggle = true;
         }
